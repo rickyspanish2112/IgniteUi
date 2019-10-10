@@ -1,0 +1,21 @@
+<div igxLayout>
+  <igx-nav-drawer #nav id="project-menu" isOpen="true" [enableGestures]='true' width="280px" >
+    <ng-template igxDrawer >
+      <div>
+      <span igxDrawerItem [isHeader]="true" ></span>
+    </div>
+      <span *ngFor="let route of topNavLinks" igxDrawerItem igxRipple routerLinkActive="igx-nav-drawer__item--active"
+        routerLink="{{route.path}}">{{route.name}}</span>
+      </ng-template>
+  </igx-nav-drawer>
+  <div igxFlex igxLayout igxLayoutDir="columns">
+    <igx-navbar title="Helios UI - V2" actionButtonIcon="menu" (onAction)="nav.toggle()">
+        <igx-switch *ngFor="let setting of settings" [checked]="setting.state" style="margin-right: 80px;" (change)="onChange($event)">
+            {{ setting.name }} [{{ modeStatus }}]
+        </igx-switch>
+    </igx-navbar>
+    <div class="content" igxFlex>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
