@@ -7,18 +7,21 @@ import { IgniteComponent } from './components/navdrawer/ignite.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/cds-declaration/header/header.component';
-import { DeclarationHostComponent } from './components/cds-declaration/declaration-host.component';
-import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/error-routing/not-found.component';
-import { ExpandingComponent } from './components/controls/expanding/expanding.component';
+import { ExpandingComponent } from './components/cds-declaration/header/header-controls/expanding-header-control/expanding.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { DeclarationTypeComponent } from './components/cds-declaration/header/declaration-type/declaration-type.component';
 @NgModule({
     declarations: [
         AppComponent,
         IgniteComponent,
         HeaderComponent,
-        DeclarationHostComponent,
+        HomeComponent,
         NotFoundComponent,
-        ExpandingComponent
+        ExpandingComponent,
+        SettingsComponent,
+        DeclarationTypeComponent
     ],
     imports: [
         BrowserModule,
