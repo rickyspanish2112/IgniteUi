@@ -6,8 +6,8 @@ import { HeaderComponent } from './components/cds-declaration/header/header.comp
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, data: { text: 'Home' } },
-  { path: 'declarations', component: HeaderComponent, data: { text: 'CDS Declaration' } },
+  { path: 'home', component: HomeComponent, data: { text: 'Welcome' } },
+  { path: 'declarations', component: HeaderComponent, data: { text: 'CDS Declaration Editor' } },
   { path: '**', component: NotFoundComponent } // must always be last
 ];
 @NgModule({
