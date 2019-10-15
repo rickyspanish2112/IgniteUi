@@ -1,0 +1,12 @@
+<igx-input-group #inputGroup>
+    <input igxInput name="towns" type="text"
+        [igxAutocomplete]='townsPanel'
+        [igxAutocompleteSettings]='settings'/>
+    <label igxLabel for="towns">Declaration Type [01]</label>
+  </igx-input-group>
+  <igx-drop-down #townsPanel>
+    <igx-drop-down-item *ngFor="let declarationType of declarationTypes | startsWith:selectedDeclarationType" [value]="declarationType | declarationtypetrimmer">
+      {{declarationType}}
+    </igx-drop-down-item>
+</igx-drop-down>
+
