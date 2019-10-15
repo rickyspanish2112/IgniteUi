@@ -12,7 +12,11 @@ import {
   IgxToggleModule,
   IgxNavbarModule,
   IgxSelectModule,
-  IgxExpansionPanelModule
+  IgxExpansionPanelModule,
+  IgxAutocompleteModule,
+  IgxDropDownModule,
+  IgxInputGroupModule,
+  IgxInputGroupComponent
 } from 'igniteui-angular';
 
 @NgModule({
@@ -30,7 +34,11 @@ import {
     IgxNavbarModule,
     IgxSelectModule,
     IgxSwitchModule,
-    IgxExpansionPanelModule
+    IgxExpansionPanelModule,
+    IgxAutocompleteModule,
+    IgxDropDownModule,
+    IgxInputGroupModule,
+    IgxInputGroupComponent
   ],
   exports: [
     CommonModule,
@@ -45,7 +53,11 @@ import {
     IgxNavbarModule,
     IgxSelectModule,
     IgxSwitchModule,
-    IgxExpansionPanelModule
+    IgxExpansionPanelModule,
+    IgxAutocompleteModule,
+    IgxDropDownModule,
+    IgxInputGroupModule,
+    IgxInputGroupComponent
   ]
 })
 export class IgniteModule { }
