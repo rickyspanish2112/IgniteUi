@@ -1,12 +1,15 @@
 <igx-input-group #inputGroup>
-    <input igxInput name="towns" type="text"
-        [igxAutocomplete]='townsPanel'
-        [igxAutocompleteSettings]='settings'/>
-    <label igxLabel for="towns">Declaration Type [01]</label>
-  </igx-input-group>
-  <igx-drop-down #townsPanel>
-    <igx-drop-down-item *ngFor="let declarationType of declarationTypes | startsWith:selectedDeclarationType" [value]="declarationType | declarationtypetrimmer">
-      {{declarationType}}
-    </igx-drop-down-item>
+  <input igxInput name="declarationType" type="text" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown"
+  [value]="dropdown.selectedItem?.value?.name | declarationtypetrimmer" />
+  <label igxLabel for="declarationType">Declaration Type [01]</label>
+</igx-input-group>
+<igx-drop-down #dropdown>
+  <div class="drop-down-virtual-wrapper">
+        <igx-drop-down-item
+            *igxFor="let item of items; index as index; scrollOrientation: 'vertical'; containerSize: itemsMaxHeight; itemSize: itemHeight;"
+            [value]="item" role="option" [disabled]="item.disabled" [index]="index" >
+            {{ item.name }}
+        </igx-drop-down-item>
+    </div>
 </igx-drop-down>
 
