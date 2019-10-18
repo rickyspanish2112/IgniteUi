@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DeclarationTypeTrimmer implements PipeTransform {
   transform(value: string, args?: any): any {
-    return value.substring(0, 3);
+    return value != null ? value.substring(0, 3) : '';
   }
 }
 

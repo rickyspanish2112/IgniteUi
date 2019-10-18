@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ConnectedPositioningStrategy, VerticalAlignment } from 'igniteui-angular';
+import { Component, OnInit, Inject } from '@angular/core';
+import { ConnectedPositioningStrategy, VerticalAlignment, DisplayDensity, DisplayDensityToken, IDisplayDensityOptions } from 'igniteui-angular';
 
 interface DataItem {
   name: string;
@@ -8,6 +8,7 @@ interface DataItem {
 }
 
 @Component({
+  providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: 'compact' } }],
   selector: 'app-declaration-type-control',
   templateUrl: './declaration-type-control.component.html',
   styleUrls: ['./declaration-type-control.component.scss']
@@ -26,11 +27,10 @@ export class DeclarationTypeControlComponent implements OnInit {
     'IMF - Simplified declaration with regular use (pre-authorised) (Import not EFTA) - Goods not arrived',
     'C21 (Import not EFTA) - Goods not arrived'
   ];
-  public itemHeight = 48;
-  public itemsMaxHeight = 240;
-  settings: { positionStrategy: ConnectedPositioningStrategy; };
+  public itemHeight = 0;
+  public itemsMaxHeight = 140;
 
-  constructor() {
+  constructor(@Inject(DisplayDensityToken) public displayDensityOptions: IDisplayDensityOptions) {
     const itemsCollection: DataItem[] = [];
 
     this.declarationTypes.forEach(element => {
@@ -45,6 +45,6 @@ export class DeclarationTypeControlComponent implements OnInit {
   }
 
   ngOnInit() {
-
+   // const initialDensity = this.displayDensityOptions.displayDensity;
   }
 }
