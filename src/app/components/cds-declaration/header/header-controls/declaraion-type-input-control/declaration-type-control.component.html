@@ -1,6 +1,6 @@
 <igx-input-group #inputGroup>
   <input igxInput name="declarationType" type="text" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown"
-  [value]="dropdown.selectedItem?.value?.name | declarationtypetrimmer"/>
+  [value]="dropdown.selectedItem?.value?.name | declarationtypetrimmer" />
   <label igxLabel for="declarationType">Declaration Type [01]</label>
 </igx-input-group>
 <igx-drop-down #dropdown>

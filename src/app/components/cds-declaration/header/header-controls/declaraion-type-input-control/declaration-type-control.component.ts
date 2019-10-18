@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { ConnectedPositioningStrategy, VerticalAlignment, DisplayDensity, DisplayDensityToken, IDisplayDensityOptions } from 'igniteui-angular';
+import { DisplayDensityToken, IDisplayDensityOptions } from 'igniteui-angular';
 
 interface DataItem {
   name: string;
@@ -29,8 +29,9 @@ export class DeclarationTypeControlComponent implements OnInit {
   ];
   public itemHeight = 0;
   public itemsMaxHeight = 140;
+  constructor(@Inject(DisplayDensityToken) public displayDensityOptions: IDisplayDensityOptions) {  }
 
-  constructor(@Inject(DisplayDensityToken) public displayDensityOptions: IDisplayDensityOptions) {
+  ngOnInit() {
     const itemsCollection: DataItem[] = [];
 
     this.declarationTypes.forEach(element => {
@@ -42,9 +43,5 @@ export class DeclarationTypeControlComponent implements OnInit {
       itemsCollection.push(item);
     });
     this.items = itemsCollection;
-  }
-
-  ngOnInit() {
-   // const initialDensity = this.displayDensityOptions.displayDensity;
   }
 }
