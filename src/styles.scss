@@ -112,25 +112,3 @@ $green-palette: igx-palette($primary: #09f,$secondary: #72da67, $surface: #333);
     color: #fff;
     @include igx-dark-theme($green-palette);
 }
-
-$my-primary-color:#0375be;
-$my-secondary-color: #7344df81;
-$my-info-color:rgba(0, 0, 0, 0.54);
-
-$my-color-palette: igx-palette(
-    $primary: $my-primary-color,
-    $secondary: $my-secondary-color,
-    $info: $my-info-color
-);
-
-$custom-panel-theme: igx-expansion-panel-theme(
-    $palette: $my-color-palette,
-    $header-background: igx-color($my-color-palette, "primary", 200),
-    $header-focus-background: igx-color($my-color-palette, "primary", 300),
-    $header-title-color: igx-color($my-color-palette, "info"),
-    $header-icon-color: igx-color($my-color-palette, "info"),
-    $body-background: igx-color($my-color-palette, "secondary", 100),
-    $border-radius: 0.35em
-);
-
-@include igx-expansion-panel($custom-panel-theme);
