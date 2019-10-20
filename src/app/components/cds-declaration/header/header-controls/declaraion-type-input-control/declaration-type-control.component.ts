@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { DisplayDensityToken, IDisplayDensityOptions } from 'igniteui-angular';
+import { DisplayDensityToken, IDisplayDensityOptions, IgxFilterOptions } from 'igniteui-angular';
 
 interface DataItem {
   name: string;
@@ -29,6 +29,14 @@ export class DeclarationTypeControlComponent implements OnInit {
   ];
   public itemHeight = 0;
   public itemsMaxHeight = 140;
+  public search: string;
+  get fo() {
+    const filterOptions = new IgxFilterOptions();
+    filterOptions.key = 'name';
+    filterOptions.inputValue = this.search;
+    return filterOptions;
+}
+
   constructor(@Inject(DisplayDensityToken) public displayDensityOptions: IDisplayDensityOptions) {  }
 
   ngOnInit() {

@@ -16,7 +16,9 @@ import {
   IgxAutocompleteModule,
   IgxDropDownModule,
   IgxInputGroupModule,
-  IgxForOfModule
+  IgxForOfModule,
+  IgxListModule,
+  IgxFilterModule
 } from 'igniteui-angular';
 
 @NgModule({
@@ -38,7 +40,9 @@ import {
     IgxAutocompleteModule,
     IgxDropDownModule,
     IgxInputGroupModule,
-    IgxForOfModule
+    IgxForOfModule,
+    IgxListModule,
+    IgxFilterModule,
   ],
   exports: [
     CommonModule,
@@ -57,7 +61,10 @@ import {
     IgxAutocompleteModule,
     IgxDropDownModule,
     IgxInputGroupModule,
-    IgxForOfModule
+    IgxForOfModule,
+    IgxListModule,
+    IgxFilterModule,
+
   ]
 })
 export class IgniteModule { }
