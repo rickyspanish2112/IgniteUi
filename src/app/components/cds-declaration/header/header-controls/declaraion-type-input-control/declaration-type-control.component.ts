@@ -1,11 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { DisplayDensityToken, IDisplayDensityOptions, IgxFilterOptions } from 'igniteui-angular';
-
-interface DataItem {
-  name: string;
-  header: boolean;
-  disabled: boolean;
-}
+import { DisplayDensityToken, IgxFilterOptions } from 'igniteui-angular';
+import { DataItem } from '../../../model/DataItem';
 
 @Component({
   providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: 'compact' } }],
@@ -22,9 +17,7 @@ export class DeclarationTypeControlComponent implements OnInit {
     'COB - Simplified declaration on an occasional basis (Trade new Member States) - Goods arrived',
     'COE - Simplified declaration on an occasional basis (Trade new Member States) - Goods not arrived',
     'COX - Supplementary declaration covered by types B and E (Trade new Member States) - Goods arrived',
-    'IMB - Simplified declaration on an occasional basis (Import not EFTA) - Goods arrived',
     'IME - Simplified declaration on an occasional basis (Import not EFTA) - Goods not arrived',
-    'IMF - Simplified declaration with regular use (pre-authorised) (Import not EFTA) - Goods not arrived',
     'C21 (Import not EFTA) - Goods not arrived'
   ];
   public itemHeight = 0;
@@ -37,7 +30,7 @@ export class DeclarationTypeControlComponent implements OnInit {
     return filterOptions;
 }
 
-  constructor(@Inject(DisplayDensityToken) public displayDensityOptions: IDisplayDensityOptions) {  }
+  constructor() {  }
 
   ngOnInit() {
     const itemsCollection: DataItem[] = [];

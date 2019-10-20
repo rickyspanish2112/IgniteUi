@@ -20,6 +20,7 @@ import {
   DeclarationTypeTrimmer,
   AutocompletePipeStartsWith
 } from './components/cds-declaration/pipes/declaration-type.pipe';
+import { BadgeControlComponent } from './components/cds-declaration/header/header-controls/badge-input-control/badge-control.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import {
         DeclarationTypeComponent,
         DeclarationTypeControlComponent,
         AutocompletePipeStartsWith,
-        DeclarationTypeTrimmer
+        DeclarationTypeTrimmer,
+        BadgeControlComponent
     ],
     imports: [
         BrowserModule,
