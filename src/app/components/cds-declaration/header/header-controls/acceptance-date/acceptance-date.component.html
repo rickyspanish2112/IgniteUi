@@ -1,0 +1,15 @@
+<igx-date-picker [value]="currentDate" mode="dropdown" locale="en-GB">
+    <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value"
+        let-displayData="displayData">
+        <igx-input-group>
+            <igx-prefix (click)="openDialog(dropDownTarget)">
+                <igx-icon>today</igx-icon>
+            </igx-prefix>
+            <label igxLabel for="dropDownTarget">Acceptance Date</label>
+          <input #dropDownTarget class="igx-date-picker__input-date" igxInput [value]="displayData"
+                (blur)="changeDate($event)" />
+        </igx-input-group>
+    </ng-template>
+</igx-date-picker>
+<igx-snackbar #snackbar></igx-snackbar>
+
