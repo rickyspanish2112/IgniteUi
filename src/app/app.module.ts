@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,31 +22,39 @@ import {
   AutocompletePipeStartsWith
 } from './components/cds-declaration/pipes/declaration-type.pipe';
 import { BadgeControlComponent } from './components/cds-declaration/header/header-controls/badge-input-control/badge-control.component';
+import { TraderRefComponent } from './components/cds-declaration/header/header-controls/trader-ref-control/trader-ref.component';
+import { AcceptanceDateComponent } from './components/cds-declaration/header/header-controls/acceptance-date/acceptance-date.component';
+
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        IgniteComponent,
-        HeaderComponent,
-        HomeComponent,
-        NotFoundComponent,
-        ExpandingComponent,
-        SettingsComponent,
-        DeclarationTypeComponent,
-        DeclarationTypeControlComponent,
-        AutocompletePipeStartsWith,
-        DeclarationTypeTrimmer,
-        BadgeControlComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        IgniteModule,
-        BrowserAnimationsModule,
-        FormsModule,
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    IgniteComponent,
+    HeaderComponent,
+    HomeComponent,
+    NotFoundComponent,
+    ExpandingComponent,
+    SettingsComponent,
+    DeclarationTypeComponent,
+    DeclarationTypeControlComponent,
+    AutocompletePipeStartsWith,
+    DeclarationTypeTrimmer,
+    BadgeControlComponent,
+    TraderRefComponent,
+    AcceptanceDateComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    IgniteModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    NgxMaskModule.forRoot(options),
+
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

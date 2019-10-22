@@ -18,7 +18,9 @@ import {
   IgxInputGroupModule,
   IgxForOfModule,
   IgxListModule,
-  IgxFilterModule
+  IgxFilterModule,
+  IgxDatePickerModule,
+  IgxSnackbarModule
 } from 'igniteui-angular';
 
 @NgModule({
@@ -43,6 +45,8 @@ import {
     IgxForOfModule,
     IgxListModule,
     IgxFilterModule,
+    IgxDatePickerModule,
+    IgxSnackbarModule
   ],
   exports: [
     CommonModule,
@@ -64,6 +68,8 @@ import {
     IgxForOfModule,
     IgxListModule,
     IgxFilterModule,
+    IgxDatePickerModule,
+    IgxSnackbarModule
 
   ]
 })

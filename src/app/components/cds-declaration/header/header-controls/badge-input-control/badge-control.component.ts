@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataItem } from '../../../model/DataItem';
 import { IgxFilterOptions, DisplayDensityToken } from 'igniteui-angular';
 
@@ -25,6 +25,9 @@ export class BadgeControlComponent implements OnInit {
     filterOptions.inputValue = this.search;
     return filterOptions;
 }
+
+@Input()
+pattern: string | RegExp;
 
   constructor() { }
 
