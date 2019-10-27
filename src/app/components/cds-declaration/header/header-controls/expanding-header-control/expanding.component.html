@@ -1,10 +1,10 @@
-<igx-expansion-panel>
+<igx-expansion-panel (onExpanded)="handleExpansion($event)" (onCollapsed)="handleCollapse($event)">
   <igx-expansion-panel-header>
     <igx-expansion-panel-title>
       CDS Declaration Header
     </igx-expansion-panel-title>
     <igx-expansion-panel-description>
-      Expand to display fields relating to a CDS Declaration header.
+      {{ExpandedDescription}}
     </igx-expansion-panel-description>
   </igx-expansion-panel-header>
   <igx-expansion-panel-body>
