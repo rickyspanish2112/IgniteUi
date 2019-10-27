@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,8 +24,6 @@ import { BadgeControlComponent } from './components/cds-declaration/header/heade
 import { TraderRefComponent } from './components/cds-declaration/header/header-controls/trader-ref-control/trader-ref.component';
 import { AcceptanceDateComponent } from './components/cds-declaration/header/header-controls/acceptance-date/acceptance-date.component';
 
-export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,8 +46,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     AppRoutingModule,
     IgniteModule,
     BrowserAnimationsModule,
-    FormsModule,
-    NgxMaskModule.forRoot(options),
+    FormsModule
 
   ],
   providers: [],
