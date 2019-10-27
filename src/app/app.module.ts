@@ -46,7 +46,7 @@ import { AcceptanceDateComponent } from './components/cds-declaration/header/hea
     AppRoutingModule,
     IgniteModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
 
   ],
   providers: [],
