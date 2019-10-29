@@ -10,22 +10,22 @@ export class ExpandingComponent implements OnInit {
 
   @ViewChild(IgxExpansionPanelComponent, { read: IgxExpansionPanelComponent, static: true })
   public panel: IgxExpansionPanelComponent;
-public expansionPanelDecription = 'Expand to display all related CDS declaration header control';
+  public expansionPanelDecription = 'Expand to display all related CDS declaration header control.';
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  public handleExpansion(evt?: {event: Event}) {
+  public handleExpansion(evt?: { event: Event }) {
     console.log('Expanded event thrown ', (evt ? 'with event: ' + evt.event : 'with no event'));
-    this.expansionPanelDecription = 'Colapse to hide all related CDS declaration header control';
+    this.expansionPanelDecription = 'Colapse to hide all related CDS declaration header control.';
 
-}
+  }
 
-public handleCollapse(evt?: {event: Event}) {
+  public handleCollapse(evt?: { event: Event }) {
     console.log('Collapsed event thrown ', (evt ? 'with event: ' + evt.event : 'with no event'));
-    this.expansionPanelDecription = 'Expand to display all related CDS declaration header control';
-}
+    this.expansionPanelDecription = 'Expand to display all related CDS declaration header control.';
+  }
 
 }
