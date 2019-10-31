@@ -12,14 +12,14 @@ body {
     margin: 0;
 }
 
-.sample-wrapper {
+/* .sample-wrapper {
     width: inherit;
     position: relative;
     height: 100%;
     margin: 0 auto;
     background: transparent;
-}
-
+} */
+/*
 .sample-content {
     display: flex;
     flex-grow: 1;
@@ -29,7 +29,7 @@ body {
     -webkit-animation: fade-in .3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     -moz-animation: fade-in .3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in .3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
+} */
 
 .sample-column {
     display: flex;
@@ -40,15 +40,15 @@ body {
     min-width: 280px;
 }
 
-.sample-title {
+/* .sample-title {
     color: #0375be;
     margin-bottom: 12px;
     margin-top: 12px;
-}
+} */
 
-.sample-title .light {
+/* .sample-title .light {
     font-weight: 400;
-}
+} */
 
 .sample-description {
     font-size: 14px;
@@ -112,3 +112,27 @@ $green-palette: igx-palette($primary: #09f,$secondary: #72da67, $surface: #333);
     color: #fff;
     @include igx-dark-theme($green-palette);
 }
+
+
+$purple: #9E379F;
+$blue: #61AEDB;
+
+$custom-palette: igx-palette($primary: $blue, $secondary: $purple);
+
+$text-color: igx-color($custom-palette, "secondary", 400);
+$border-color:  igx-color($custom-palette, "secondary", 900);
+$background-color: #91CEFB27;
+
+$input-group-theme: igx-input-group-theme(
+  $palette: $custom-palette,
+  $filled-text-color: $text-color,
+  $focused-text-color: $text-color,
+  $idle-text-color: $text-color,
+  $idle-bottom-line-color: $border-color,
+  $focused-bottom-line-color: $border-color,
+  $interim-bottom-line-color: $border-color,
+  $hover-bottom-line-color: $border-color,
+  $box-background: $background-color
+);
+
+@include igx-input-group($input-group-theme);

@@ -1,4 +1,4 @@
-<igx-input-group #inputGroup >
+<igx-input-group #inputGroup type="border">
     <input igxInput name="declarationType" type="text" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown"
     [value]="dropdown.selectedItem?.value?.name | declarationtypetrimmer" [(ngModel)]="search" (click)="search = null" pattern="[A-Za-z]{3}" />
     <label igxLabel for="declarationType">Badges</label>
