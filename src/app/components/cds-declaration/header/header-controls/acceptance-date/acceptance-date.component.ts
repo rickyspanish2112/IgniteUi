@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxDatePickerComponent } from 'igniteui-angular';
+import { IgxDatePickerComponent, DisplayDensityToken } from 'igniteui-angular';
 
 @Component({
   selector: 'app-acceptance-date',
+  providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: 'compact' } }],
   templateUrl: './acceptance-date.component.html',
   styleUrls: ['./acceptance-date.component.scss']
 })
