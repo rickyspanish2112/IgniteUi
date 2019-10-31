@@ -1,14 +1,18 @@
-<article class="sample-column">
-  <div class="layout-sample">
-    <div class="layout-sample">
-      <div class="layout-box" igxLayout igxLayoutJustify="start">
-          <div class="layout-box__el">Declaration Type</div>
-          <div class="layout-box__el">Badge</div>
-          <div class="layout-box__el">Trader Reference</div>
-          <div class="layout-box__el">Acceptance Date</div>
+<article class="flex-column">
+      <div class="layout-box" igxLayout igxLayoutJustify="space-between">
+          <div class="layout-box__el" >
+            <app-declaration-type-control></app-declaration-type-control>
+          </div>
+          <div class="layout-box__el">
+            <app-badge-control></app-badge-control>
+          </div>
+          <div class="layout-box__el">
+            <app-trader-ref></app-trader-ref>
+          </div>
+          <div class="layout-box__el">
+            <app-acceptance-date></app-acceptance-date>
+          </div>
       </div>
-  </div>
-  </div>
 </article>
 
 <!-- <div>

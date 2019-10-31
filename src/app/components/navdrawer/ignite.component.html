@@ -9,7 +9,7 @@
       </ng-template>
   </igx-nav-drawer>
   <div igxFlex igxLayout igxLayoutDir="columns">
-    <igx-navbar title="Helios UI - V2" actionButtonIcon="menu" (onAction)="nav.toggle()">
+    <igx-navbar title="Helios UI - V1 (PROTOTYPE)" actionButtonIcon="menu" (onAction)="nav.toggle()">
         <igx-switch *ngFor="let setting of settings" [checked]="setting.state" style="margin-right: 80px;" (change)="onChange($event)">
             {{ setting.name }} [{{ modeStatus }}]
         </igx-switch>

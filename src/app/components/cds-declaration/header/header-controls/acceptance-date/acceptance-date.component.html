@@ -1,7 +1,7 @@
 <igx-date-picker [value]="currentDate" mode="dropdown" locale="en-GB">
     <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value"
         let-displayData="displayData">
-        <igx-input-group>
+        <igx-input-group type="border">
             <igx-prefix (click)="openDialog(dropDownTarget)">
                 <igx-icon>today</igx-icon>
             </igx-prefix>
