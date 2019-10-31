@@ -1,14 +1,11 @@
-@import '../../../../../../styles/themes.scss';
-@import '../../../../../../styles/theme-classes.scss';
-
 :host {
   display: block;
-  margin: 8px;
+ // margin: 8px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .26), 0 2px 2px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .08);
 }
 
 igx-expansion-panel-body {
-padding: 8px 16px;
+// padding: 8px 16px;
 }
 
 .igx-expansion-panel__header-title {
@@ -44,7 +41,7 @@ padding: 8px 16px;
   color: white;
 }
 
-.tall {
+/* .tall {
   height: 300px;
 }
 
@@ -58,5 +55,5 @@ padding: 8px 16px;
 
 .wrap-column {
   height: calc(50% - 16px);
-}
+} */
 
