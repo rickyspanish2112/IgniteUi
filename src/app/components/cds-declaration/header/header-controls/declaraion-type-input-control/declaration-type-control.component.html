@@ -1,6 +1,6 @@
 <igx-input-group #inputGroup type="border">
   <input igxInput name="declarationType" type="text" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown"
-  [value]="dropdown.selectedItem?.value?.name | declarationtypetrimmer" [(ngModel)]="search" (click)="search = null" />
+  [value]="dropdown.selectedItem?.value?.name | declarationtypetrimmer" [(ngModel)]="search" (click)="search = null" pattern="[A-Za-z]{3}" />/>
   <label igxLabel for="declarationType">{{labelPlaceHolder}}</label>
 </igx-input-group>
 <igx-drop-down #dropdown>
@@ -12,4 +12,3 @@
         </igx-drop-down-item>
     </div>
 </igx-drop-down>
-

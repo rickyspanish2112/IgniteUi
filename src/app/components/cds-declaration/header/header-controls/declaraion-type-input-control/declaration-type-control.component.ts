@@ -1,9 +1,11 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import { DisplayDensityToken, IgxFilterOptions } from 'igniteui-angular';
 import { DataItem } from '../../../model/DataItem';
 
 @Component({
-  providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: 'compact' } }],
+  providers: [
+    { provide: DisplayDensityToken, useValue: { displayDensity: 'compact' } }
+  ],
   selector: 'app-declaration-type-control',
   templateUrl: './declaration-type-control.component.html',
   styleUrls: ['./declaration-type-control.component.scss']
@@ -24,14 +26,16 @@ export class DeclarationTypeControlComponent implements OnInit {
   public itemHeight = 0;
   public itemsMaxHeight = 140;
   public search: string;
+  @Input()
+  pattern: string | RegExp;
   get fo() {
     const filterOptions = new IgxFilterOptions();
     filterOptions.key = 'name';
     filterOptions.inputValue = this.search;
     return filterOptions;
-}
+  }
 
-  constructor() {  }
+  constructor() {}
 
   ngOnInit() {
     const itemsCollection: DataItem[] = [];
