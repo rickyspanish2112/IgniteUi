@@ -17,6 +17,10 @@ export class PartyComponent implements OnInit {
   exporterDescription = 'exporter';
   declarantDescription = 'declarant';
 
+  importerPartyLable = 'Schenker UK Ltd';
+  exporterPartyLable = 'NNR UK Ltd';
+  declarantPartyLable = 'ASM UK Ltd';
+
   ngOnInit() {
   }
 

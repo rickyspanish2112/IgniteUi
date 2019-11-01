@@ -1,13 +1,13 @@
 <article class="sample-column">
     <div class="layout-box" igxLayout igxLayoutJustify="space-between">
       <div class="layout-box__el">
-        <app-party-control [partyType]="sellerPartyType" [partyTypeDescription]="sellerDescription"></app-party-control>
+        <app-party-control [partyType]="sellerPartyType" [partyTypeDescription]="sellerDescription" [shortCodeLabel]="importerPartyLable"></app-party-control>
       </div>
       <div class="layout-box__el">
-        <app-party-control [partyType]="buyerPartyType" [partyTypeDescription]="buyerDescription"></app-party-control>
+        <app-party-control [partyType]="buyerPartyType" [partyTypeDescription]="buyerDescription" [shortCodeLabel]="exporterPartyLable"></app-party-control>
       </div>
       <div class="layout-box__el">
-        <app-party-control [partyType]="representitivePartyType" [partyTypeDescription]="represetnitiveDescription"></app-party-control>
+        <app-party-control [partyType]="representitivePartyType" [partyTypeDescription]="represetnitiveDescription" [shortCodeLabel]="declarantPartyLable"></app-party-control>
       </div>
     </div>
   </article>
