@@ -9,6 +9,7 @@ import { DataItem } from '../../../model/DataItem';
   styleUrls: ['./declaration-type-control.component.scss']
 })
 export class DeclarationTypeControlComponent implements OnInit {
+  public labelPlaceHolder = 'Declaration Type [01]';
   public items: DataItem[];
   public declarationTypes = [
     'IMA - Standard customs declaration (Import not EFTA) - Goods arrived',

@@ -8,6 +8,7 @@ import { DisplayDensityToken } from 'igniteui-angular';
   styleUrls: ['./trader-ref.component.scss']
 })
 export class TraderRefComponent implements OnInit {
+public labelPlaceHolder = 'Trader Reference [07]';
 
   constructor() { }
 
