@@ -5,9 +5,10 @@
             <igx-prefix (click)="openDialog(dropDownTarget)">
                 <igx-icon>today</igx-icon>
             </igx-prefix>
-            <label igxLabel for="dropDownTarget">Acceptance Date</label>
+            <label igxLabel for="dropDownTarget">{{labelPlaceHolder}}</label>
           <input #dropDownTarget class="igx-date-picker__input-date" igxInput [value]="displayData"
-                (blur)="changeDate($event)" />
+                (blur)="changeDate($event)" [igxMask]="'00/00/0000'"
+                [placeholder]="'dd/mm/yyyy'" />
         </igx-input-group>
     </ng-template>
 </igx-date-picker>

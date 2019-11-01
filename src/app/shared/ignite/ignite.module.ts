@@ -22,6 +22,7 @@ import {
   IgxDatePickerModule,
   IgxSnackbarModule,
   IgxCardModule,
+  IgxMaskModule,
 } from 'igniteui-angular';
 
 @NgModule({
@@ -49,6 +50,7 @@ import {
     IgxDatePickerModule,
     IgxSnackbarModule,
     IgxCardModule,
+    IgxMaskModule,
   ],
   exports: [
     CommonModule,
@@ -73,6 +75,7 @@ import {
     IgxDatePickerModule,
     IgxSnackbarModule,
     IgxCardModule,
+    IgxMaskModule,
 
   ]
 })

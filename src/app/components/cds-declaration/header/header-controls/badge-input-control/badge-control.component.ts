@@ -9,6 +9,7 @@ import { IgxFilterOptions, DisplayDensityToken } from 'igniteui-angular';
   styleUrls: ['./badge-control.component.scss']
 })
 export class BadgeControlComponent implements OnInit {
+  public labelPlaceHolder = 'Badges';
   public items: DataItem[];
   public badges = [
     'DOZ - Schenker UK',

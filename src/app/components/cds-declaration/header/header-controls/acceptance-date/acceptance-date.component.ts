@@ -8,6 +8,7 @@ import { IgxDatePickerComponent, DisplayDensityToken } from 'igniteui-angular';
   styleUrls: ['./acceptance-date.component.scss']
 })
 export class AcceptanceDateComponent {
+  public labelPlaceHolder = 'Acceptance Date';
   public currentDate;
 
   @ViewChild(IgxDatePickerComponent, { static: true })
