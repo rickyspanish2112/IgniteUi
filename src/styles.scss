@@ -71,15 +71,6 @@ body {
 
  $green-palette: igx-palette($primary: #09f,$secondary: #72da67, $surface: #333);
 
-/* .fin-dark-theme {
-    @include igx-dark-theme($green-palette);
-     background: #333;
-
-     ::-moz-placeholder {
-         opacity: 1;
-     }
- } */
-
 .dark-theme {
     background: #333;
     color: #fff;
@@ -109,5 +100,10 @@ $input-group-theme: igx-input-group-theme(
 );
 
 @include igx-input-group($input-group-theme);
+
+igx-input-group {
+  font-size: 14px;
+}
+
 
 
