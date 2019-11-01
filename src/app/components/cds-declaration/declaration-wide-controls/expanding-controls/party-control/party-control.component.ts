@@ -10,12 +10,16 @@ import { DisplayDensityToken } from 'igniteui-angular';
 export class PartyControlComponent implements OnInit {
 
   constructor() { }
+  public currentImporterShortCode = 'Apple (UK) Ltd';
+  public currentExporterShortCode = 'Microsoft';
+ public currentDeclarantShortCode = 'ASM UK Ltd';
 
   @Input()
   partyType: string;
-
   @Input()
   partyTypeDescription: string;
+  @Input()
+  shortCodeLabel: string;
 
   ngOnInit() {
   }
