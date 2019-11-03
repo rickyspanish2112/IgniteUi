@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { NotFoundComponent } from './components/error-routing/not-found.component';
+import { NotFoundComponent } from '../app/core/error-routing/not-found.component';
 import { HeaderComponent } from './components/cds-declaration/header/header.component';
 
 export const routes: Routes = [
