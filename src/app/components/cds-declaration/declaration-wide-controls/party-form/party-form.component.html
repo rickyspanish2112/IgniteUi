@@ -1,12 +1,54 @@
-<div class="layout-sample" >
     <div class="layout-box" igxLayout igxLayoutJustify="end">
-        <div class="layout-box__el">1</div>
-        <div class="layout-box__el">2</div>
+        <div class="layout-box__el">
+          <igx-input-group type="border"  style="width: 200px;">
+            <input igxInput name="traderRef"type="text"/>
+            <label igxLabel for="traderRef" >{{shortCodePlaceHolder}}</label>
+          </igx-input-group>
+        </div>
+        <div class="layout-box__el">
+          <igx-input-group type="border"  style="width: 200px;">
+            <input igxInput name="traderRef"type="text"/>
+            <label igxLabel for="traderRef">{{namePlaceHolder}}</label>
+          </igx-input-group>
+        </div>
     </div>
+    <div class="layout-box" igxLayout igxLayoutJustify="end" style="margin-top: -15px;" >
+        <div class="layout-box__el">
+          <igx-input-group type="border"  style="width: 200px;">
+            <input igxInput name="traderRef"type="text"/>
+            <label igxLabel for="traderRef" >{{street1PlaceHolder}}</label>
+          </igx-input-group>
+        </div>
+        <div class="layout-box__el">  <igx-input-group type="border"  style="width: 200px;">
+          <input igxInput name="traderRef"type="text"/>
+          <label igxLabel for="traderRef" >{{street2PlaceHolder}}</label>
+        </igx-input-group></div>
 </div>
-<div class="layout-sample">
-    <div class="layout-box" igxLayout igxLayoutJustify="end">
-        <div class="layout-box__el">1</div>
-        <div class="layout-box__el">2</div>
-    </div>
+
+<div class="layout-box" igxLayout igxLayoutJustify="end" style="margin-top: -15px;" >
+  <div class="layout-box__el">
+    <igx-input-group type="border"  style="width: 200px;">
+      <input igxInput name="traderRef"type="text"/>
+      <label igxLabel for="traderRef" >{{cityPlaceHolder}}</label>
+    </igx-input-group>
+  </div>
+  <div class="layout-box__el">  <igx-input-group type="border"  style="width: 200px;">
+    <input igxInput name="traderRef"type="text"/>
+    <label igxLabel for="traderRef" >{{countyPlaceHolder}}</label>
+  </igx-input-group></div>
 </div>
+
+<div class="layout-box" igxLayout igxLayoutJustify="end" style="margin-top: -15px;" >
+  <div class="layout-box__el">
+    <igx-input-group type="border"  style="width: 200px;">
+      <input igxInput name="traderRef"type="text"/>
+      <label igxLabel for="traderRef" >{{postCodePlaceHolder}}</label>
+    </igx-input-group>
+  </div>
+  <div class="layout-box__el">
+    <igx-input-group type="border" style="float: right;">
+    <input igxInput name="traderRef"type="text"/>
+    <label igxLabel for="traderRef" >{{countryCodePlaceHolder}}</label>
+  </igx-input-group></div>
+</div>
+
