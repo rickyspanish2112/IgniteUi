@@ -7,7 +7,15 @@ import { IgxExpansionPanelComponent, IExpansionPanelEventArgs, DisplayDensityTok
   templateUrl: './party-form.component.html',
   styleUrls: ['./party-form.component.scss']
 })
-export class PartyFormComponent {
 
+export class PartyFormComponent {
+  shortCodePlaceHolder = 'ShortCode';
+  namePlaceHolder = 'Account Name';
+  street1PlaceHolder = 'Street';
+  street2PlaceHolder = 'Street1';
+  cityPlaceHolder = 'City';
+  countyPlaceHolder = 'County';
+  postCodePlaceHolder = 'Post Code';
+  countryCodePlaceHolder = 'Country';
 
 }
