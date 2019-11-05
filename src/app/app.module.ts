@@ -10,6 +10,8 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './components/home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { CdsdeclarationModule } from './components/cds-declaration/cdsdeclaration.module';
+import { IgxOverlayService } from 'igniteui-angular';
+import { PartyFormComponent } from './components/cds-declaration/declaration-wide-controls/party-form/party-form.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,11 @@ import { CdsdeclarationModule } from './components/cds-declaration/cdsdeclaratio
     CoreModule,
     HomeModule,
     SharedModule,
-    CdsdeclarationModule
+    CdsdeclarationModule,
   ],
   exports: [],
-  providers: [],
+  providers: [IgxOverlayService],
+  entryComponents: [PartyFormComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

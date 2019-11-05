@@ -1,17 +1,19 @@
+.container {
+  border: 1px black solid;
+  border-radius: 3px;
+}
+
 .layout-box {
   width: 100%;
   height: 100%;
   background: #e0e0e0;
   padding: 2px;
-
-
 }
 
 .layout-box__el {
   height: 48px;
   padding: 4px;
   margin: 4px;
- // background: #e41c77;
   color: white;
 }
 
