@@ -13,6 +13,8 @@ import { PartyControlComponent } from './declaration-wide-controls/expanding-con
 import { PartyFormComponent } from './declaration-wide-controls/party-form/party-form.component';
 import { IgniteModule } from 'src/app/shared/ignite/ignite.module';
 import { AutocompletePipeStartsWith, DeclarationTypeTrimmer } from './pipes/declaration-type.pipe';
+import { TransportdataComponent } from './header/transport-data/transportdata.component';
+import { ValuebuildupComponent } from './header/valuebuildup.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { AutocompletePipeStartsWith, DeclarationTypeTrimmer } from './pipes/decl
     PartyControlComponent,
     PartyFormComponent,
     AutocompletePipeStartsWith,
-    DeclarationTypeTrimmer
+    DeclarationTypeTrimmer,
+    TransportdataComponent,
+    ValuebuildupComponent
   ],
   imports: [
     SharedModule,

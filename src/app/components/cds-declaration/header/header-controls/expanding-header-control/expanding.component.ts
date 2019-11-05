@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxExpansionPanelComponent } from 'igniteui-angular';
+import { IgxExpansionPanelComponent, DisplayDensityToken } from 'igniteui-angular';
 
 @Component({
+  providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: 'compact' } }],
   selector: 'app-expanding',
   templateUrl: './expanding.component.html',
   styleUrls: ['./expanding.component.scss']
