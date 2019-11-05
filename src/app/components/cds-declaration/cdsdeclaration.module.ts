@@ -15,6 +15,8 @@ import { IgniteModule } from 'src/app/shared/ignite/ignite.module';
 import { AutocompletePipeStartsWith, DeclarationTypeTrimmer } from './pipes/declaration-type.pipe';
 import { TransportdataComponent } from './header/transport-data/transportdata.component';
 import { ValuebuildupComponent } from './header/valuebuildup.component';
+import { IgxOverlayService } from 'igniteui-angular';
+
 
 
 @NgModule({
@@ -33,12 +35,12 @@ import { ValuebuildupComponent } from './header/valuebuildup.component';
     AutocompletePipeStartsWith,
     DeclarationTypeTrimmer,
     TransportdataComponent,
-    ValuebuildupComponent
+    ValuebuildupComponent,
   ],
   imports: [
     SharedModule,
     IgniteModule,
-
-  ]
+  ],
+  providers: [IgxOverlayService],
 })
 export class CdsdeclarationModule { }
