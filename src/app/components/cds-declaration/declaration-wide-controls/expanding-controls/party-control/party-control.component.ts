@@ -34,9 +34,6 @@ export class PartyControlComponent implements OnInit, OnDestroy {
             .subscribe(() => delete this.overlayId);
   }
 
-
-
-
   @Input()
   partyType: string;
   @Input()
