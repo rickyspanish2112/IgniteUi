@@ -1,10 +1,70 @@
-div .totalPackages {
-  display: table-cell;
-  padding-right: 100px;
-  width: 38%;
+.parent {
 }
 
-div .representation {
-  display: table-cell;
-  padding-right: 175px;
+.inline-block-child {
+  display: inline-block;
 }
+
+.child {
+  margin-top: 8px;
+}
+
+ .representation {
+  padding-right: 180px;
+}
+
+.destinationCountry {
+  padding-right: 180px;
+}
+
+.deliveryTermsUnLoCode {
+ padding-left: 8px;
+}
+
+.deliveryTermsUnLocation{
+  padding-left: 8px;
+  width: 239px;
+}
+
+.totalInvoiceCurrency {
+}
+
+.totalInvoiceAmount {
+  margin-left: 8px;
+}
+
+.exchangeRate {
+margin-left: 63px;
+}
+
+.goodsLocation {
+  width: 598px;
+}
+
+.secondDeferment {
+  float: right;
+  padding-right: 180px;
+}
+
+.warehouseHouse {
+  width: 350px;
+}
+
+.site {
+  float: right;
+  padding-right: 180px;
+}
+
+.supervisingOfice {
+
+}
+
+.grossMass  {
+  float: right;
+  padding-right: 180px;
+}
+
+.presentationOffice {
+
+}
+

@@ -1,11 +1,72 @@
-<div style="width: 100%; display: table;">
-  <div style="display: table-row">
-      <div class="totalPackages"> <app-input [placeHolder] = 'totalPackages'></app-input> </div>
-      <div class="representation"> <app-input [placeHolder] = 'representation'></app-input> </div>
+<div class='parent'>
+  <div class='child inline-block-child'>
+    <app-input [placeHolder]='totalPackages'></app-input>
+  </div>
+  <div class='child inline-block-child representation' style="float: right;">
+    <app-input [placeHolder]='representation'></app-input>
   </div>
 </div>
-<div>1</div>
-<div>1</div>
-<div>1</div>
-<div>1</div>
-
+<div class='parent'>
+  <div class='child inline-block-child'>
+    <app-input [placeHolder]='dispatchCountry'></app-input>
+  </div>
+  <div class='child inline-block-child destinationCountry' style="float: right;">
+    <app-input [placeHolder]='destinationCountry'></app-input>
+  </div>
+</div>
+<div class='totalInvoiceCurrency'>
+  <div class='child inline-block-child'>
+    <app-input [placeHolder]='totalInvoiceCurrency'></app-input>
+  </div>
+  <div class='child inline-block-child totalInvoiceAmount'>
+    <app-input [placeHolder]='totalInvoiceAmount'></app-input>
+  </div>
+  <div class='child inline-block-child exchangeRate'>
+    <app-input [placeHolder]='exchangeRate'></app-input>
+  </div>
+</div>
+<div class='deliveryTerms'>
+  <div class='child inline-block-child'>
+    <app-input [placeHolder]='deliveryTerms'></app-input>
+  </div>
+  <div class='child inline-block-child deliveryTermsUnLoCode'>
+    <app-input [placeHolder]='deliveryTermsUnLoCode'></app-input>
+  </div>
+  <div class='child inline-block-child deliveryTermsUnLocation'>
+    <app-input [placeHolder]='deliveryTermsLocation'></app-input>
+  </div>
+</div>
+<div class='parent'>
+  <div class='child inline-block-child' style="width: 599px;">
+    <app-input [placeHolder]='goodsLocation'></app-input>
+  </div>
+</div>
+<div class='parent'>
+  <div class='child inline-block-child'>
+    <app-input [placeHolder]='firstDeferment'></app-input>
+  </div>
+  <div class='child inline-block-child secondDeferment'>
+    <app-input [placeHolder]='secondDeferment'></app-input>
+  </div>
+</div>
+<div class='parent'>
+  <div class='child inline-block-child warehouseHouse'>
+    <app-input [placeHolder]='warehouseHouse'></app-input>
+  </div>
+  <div class='child inline-block-child site'>
+    <app-input [placeHolder]='site'></app-input>
+  </div>
+</div>
+<div class='parent'>
+  <div class='child inline-block-child supervisingOfice'>
+    <app-input [placeHolder]='supervisingOfice'></app-input>
+  </div>
+  <div class='child inline-block-child grossMass'>
+    <app-input [placeHolder]='grossMass'></app-input>
+  </div>
+</div>
+<div class='parent'>
+  <div class='child inline-block-child presentationOffice'>
+    <app-input [placeHolder]='presentationOffice'></app-input>
+  </div>
+</div>
