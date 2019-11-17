@@ -11,6 +11,8 @@ body {
     height: 100%;
     overflow: hidden;
     margin: 0;
+    overflow-y:auto;
+    max-height: 100vh;
 }
 
 @-webkit-keyframes color-change-2x {
