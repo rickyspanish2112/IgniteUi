@@ -6,24 +6,22 @@
 }
 
 .child {
-  margin-top: 8px;
+  margin: 8px;
 }
 
  .representation {
-  padding-right: 180px;
+ // padding-right: 180px;
 }
 
 .destinationCountry {
-  padding-right: 180px;
+//  padding-right: 180px;
 }
 
 .deliveryTermsUnLoCode {
- padding-left: 8px;
 }
 
-.deliveryTermsUnLocation{
-  padding-left: 8px;
-  width: 239px;
+.deliveryTermsUnLocation {
+  width: 56%;
 }
 
 .totalInvoiceCurrency {
@@ -35,24 +33,25 @@
 
 .exchangeRate {
 margin-left: 63px;
+float: right;
 }
 
 .goodsLocation {
-  width: 598px;
+  width: 56%;
 }
 
 .secondDeferment {
   float: right;
-  padding-right: 180px;
+ // padding-right: 180px;
 }
 
 .warehouseHouse {
-  width: 350px;
+  width: 56%;
 }
 
 .site {
   float: right;
-  padding-right: 180px;
+ // padding-right: 180px;
 }
 
 .supervisingOfice {
@@ -61,7 +60,6 @@ margin-left: 63px;
 
 .grossMass  {
   float: right;
-  padding-right: 180px;
 }
 
 .presentationOffice {
