@@ -19,10 +19,6 @@ export class PartyControlComponent implements OnInit, OnDestroy {
   @ViewChild('buttonElement', { static: true })
   private buttonElement: ElementRef;
 
- public currentImporterShortCode = 'Apple (UK) Ltd';
- public currentExporterShortCode = 'Microsoft';
- public currentDeclarantShortCode = 'ASM UK Ltd';
-
   constructor(@Inject(IgxOverlayService) public overlayService: IgxOverlayService) {
     //  overlay service deletes the id when onClosed is called. We should clear our id
         //  also in same event
