@@ -18,6 +18,9 @@ import { ValuebuildupComponent } from './header/transport-data/valuebuildup.comp
 import { IgxOverlayService } from 'igniteui-angular';
 import { InputComponent } from 'src/app/shared/components/controls/input/input.component';
 import { TransportComponent } from './header/transport-data/transport.component';
+import { GridContainerComponent } from './header/grids/grid-container.component';
+import { Grid1Component } from './header/grids/grid-1/grid1.component';
+import { Grid2Component } from './header/grids/grid-2/grid2.component';
 
 
 
@@ -39,7 +42,10 @@ import { TransportComponent } from './header/transport-data/transport.component'
     TransportdataComponent,
     ValuebuildupComponent,
     InputComponent,
-    TransportComponent
+    TransportComponent,
+    GridContainerComponent,
+    Grid1Component,
+    Grid2Component
   ],
   imports: [
     SharedModule,
