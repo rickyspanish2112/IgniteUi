@@ -15,9 +15,13 @@
     </igx-drop-down>
     </igx-input-group>
   </div>
-<div class='parent'>
-  <div class='child inline-block-child'>
-    <app-input class="apportionedBy" [placeHolder]='airportOfLoading'></app-input>
-  </div>
+<div style="margin-left: 8px;">
+   <div class="layout-box tall" igxLayout igxLayoutItemAlign="flex-start">
+              <div class="layout-box__el" igxFlex igxFlexGrow="0">
+                 <app-input class="apportionedBy" [placeHolder]='airportOfLoading'></app-input>
+              </div>
+              <div class="layout-box__el" igxFlex igxFlexGrow="1" style="margin-left: 40px; margin-top: 10px; color: black;">Curr.</div>
+              <div class="layout-box__el" igxFlex igxFlexGrow="1" style="margin-top: 10px; color: black;">Amount</div>
+              <div class="layout-box__el" igxFlex igxFlexGrow="1" style="margin-top: 10px; color: black;">Code</div>
+          </div>
 </div>
-
