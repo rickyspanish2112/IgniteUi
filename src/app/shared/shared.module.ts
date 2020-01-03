@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-// import { InputComponent } from './components/controls/input/input.component';
-
+import { IgniteModule } from './ignite/ignite.module';
 
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    IgniteModule,
   ],
   exports: [CommonModule, FormsModule]
 })

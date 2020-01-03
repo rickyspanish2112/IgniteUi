@@ -20,3 +20,20 @@
   margin: 8px;
 }
 
+.layout-box__el {
+  height: 48px;
+  padding: 8px;
+  color: black;
+}
+
+.light {
+  font-weight: 400;
+}
+
+.wrap-row {
+  width: calc(50% - 16px);
+}
+
+.wrap-column {
+  height: calc(50% - 16px);
+}

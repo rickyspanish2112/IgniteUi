@@ -21,6 +21,7 @@ import { TransportComponent } from './header/transport-data/transport.component'
 import { GridContainerComponent } from './header/grids/grid-container.component';
 import { Grid1Component } from './header/grids/grid-1/grid1.component';
 import { Grid2Component } from './header/grids/grid-2/grid2.component';
+import { DropdownComponent } from 'src/app/shared/components/controls/dropdown/dropdown.component';
 
 
 
@@ -45,7 +46,8 @@ import { Grid2Component } from './header/grids/grid-2/grid2.component';
     TransportComponent,
     GridContainerComponent,
     Grid1Component,
-    Grid2Component
+    Grid2Component,
+    DropdownComponent
   ],
   imports: [
     SharedModule,

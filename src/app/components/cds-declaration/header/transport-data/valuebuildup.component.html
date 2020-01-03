@@ -1,27 +1,20 @@
-<div class="title border">Value Build Up</div>
+<div class="title border">Value Build Up / Additions and Deductions</div>
 <div class="title"></div>
 
-  <div class='child inline-block-child'>
-    <igx-input-group type="border" [igxToggleAction]="dropdown">
-      <input #input class="input" name="dropdown" type="text" igxInput [igxDropDownItemNavigation]="dropdown"
-      readonly= "true"
-      [value]="dropdown.selectedItem?.value"
-      (keydown.ArrowDown)="openDropDown()"/>
-      <label igxLabel for="dropdown">{{apportionedBy}}</label>
-      <igx-drop-down #dropdown [width]="'160px'">
-        <igx-drop-down-item *ngFor="let item of items" [value]="item.field">
-            {{ item.field }}
-        </igx-drop-down-item>
-    </igx-drop-down>
-    </igx-input-group>
+<div class='child inline-block-child'>
+  <app-dropdown [placeHolder]='apportionedBy'></app-dropdown>
+</div>
+<div>
+  <div class="tall" igxLayout igxLayoutItemAlign="flex-start">
+    <div class="layout-box__el" igxFlex igxFlexGrow="0">
+      <app-input class="apportionedBy" [placeHolder]='airportOfLoading'></app-input>
+    </div>
   </div>
 <div style="margin-left: 8px;">
-   <div class="layout-box tall" igxLayout igxLayoutItemAlign="flex-start">
-              <div class="layout-box__el" igxFlex igxFlexGrow="0">
-                 <app-input class="apportionedBy" [placeHolder]='airportOfLoading'></app-input>
-              </div>
-              <div class="layout-box__el" igxFlex igxFlexGrow="1" style="margin-left: 40px; margin-top: 10px; color: black;">Curr.</div>
-              <div class="layout-box__el" igxFlex igxFlexGrow="1" style="margin-top: 10px; color: black;">Amount</div>
-              <div class="layout-box__el" igxFlex igxFlexGrow="1" style="margin-top: 10px; color: black;">Code</div>
-          </div>
+  <div class="layout-box" igxLayout igxLayoutDir="row" style="margin-left: 200px;">
+    <div class="layout-box__el" igxFlex igxFlexGrow="1">1</div>
+    <div class="layout-box__el" igxFlex igxFlexGrow="1">2</div>
+    <div class="layout-box__el" igxFlex igxFlexGrow="1">3</div>
+</div>
+</div>
 </div>
