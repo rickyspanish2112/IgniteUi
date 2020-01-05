@@ -1,5 +1,13 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxGridTransaction, IgxTransactionService, IgxDialogComponent, IgxGridComponent, Transaction } from 'igniteui-angular';
+import {
+  IgxGridTransaction,
+  IgxTransactionService,
+  IgxDialogComponent,
+  IgxGridComponent,
+  Transaction,
+  IGridKeydownEventArgs,
+  IgxGridCellComponent
+} from 'igniteui-angular';
 import { DATA } from './data/dummyData';
 
 @Component({
@@ -9,11 +17,17 @@ import { DATA } from './data/dummyData';
   styleUrls: ['./grid.component.scss']
 })
 export class GridComponent implements OnInit {
-  @ViewChild('gridRowEditTransaction', { read: IgxGridComponent, static: true }) public grid: IgxGridComponent;
-  @ViewChild(IgxDialogComponent, { static: true }) public dialog: IgxDialogComponent;
-  @ViewChild('dialogGrid', { read: IgxGridComponent, static: true }) public dialogGrid: IgxGridComponent;
+  @ViewChild('gridRowEditTransaction', { read: IgxGridComponent, static: true })
+  public grid: IgxGridComponent;
+  @ViewChild(IgxDialogComponent, { static: true })
+  public dialog: IgxDialogComponent;
+  @ViewChild('dialogGrid', { read: IgxGridComponent, static: true })
+  public dialogGrid: IgxGridComponent;
 
-  public currentActiveGrid: { id: string, transactions: any[] } = { id: '', transactions: [] };
+  public currentActiveGrid: { id: string; transactions: any[] } = {
+    id: '',
+    transactions: []
+  };
 
   public data: any[];
   public transactionsData: Transaction[] = [];
@@ -25,7 +39,7 @@ export class GridComponent implements OnInit {
   constructor() {
     this.data = DATA;
     this.Id = this.data.length + 1;
-  }
+    }
 
   ngOnInit(): void {
     this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
@@ -35,6 +49,10 @@ export class GridComponent implements OnInit {
   }
 
   public addRow() {
+    this.doAddRow();
+  }
+
+  private doAddRow() {
     this.grid.addRow({
       Id: this.Id++,
       Code: this.code,
@@ -72,7 +90,7 @@ export class GridComponent implements OnInit {
   public discard() {
     this.grid.transactions.clear();
     this.dialog.close();
-}
+  }
 
   public stateFormatter(value: string) {
     return JSON.stringify(value);
@@ -96,5 +114,37 @@ export class GridComponent implements OnInit {
 
   public get hasTransactions(): boolean {
     return this.grid.transactions.getAggregatedChanges(false).length > 0;
+  }
+
+  public customKeydown(args: IGridKeydownEventArgs) {
+    const target: IgxGridCellComponent = args.target as IgxGridCellComponent;
+    const evt: KeyboardEvent = args.event as KeyboardEvent;
+    const type = args.targetType;
+
+    if (type === 'dataCell' && evt.key.toLowerCase() === 'arrowdown') {
+      // Value validation for number column.
+      // This covers both 'tab' and 'shift+tab' key interactions.
+      // args.event.preventDefault();
+      // args.cancel = true;
+
+      this.doAddRow();
+
+      /* if (target.column.dataType === 'number' && target.editValue < 10) {
+            alert('The value should be bigger than 10');
+            return;
+        }
+        const cell = evt.shiftKey ?
+            this.grid.getPreviousCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable) :
+            this.grid.getNextCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable);
+
+        this.grid.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
+            (obj) => { obj.target.nativeElement.focus(); });
+    } else if (type === 'dataCell' && evt.key.toLowerCase() === 'enter') {
+        // Perform column based kb navigation with 'enter' key press
+        args.cancel = true;
+        this.grid.selectRange(null);
+        this.grid.navigateTo(target.rowIndex + 1, target.visibleColumnIndex,
+            (obj) => { obj.target.nativeElement.focus(); });*/
+    }
   }
 }
