@@ -1,14 +1,15 @@
 <igx-input-group #inputGroup type="border">
   <input igxInput name="declarationType" type="text" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown"
-  [value]="dropdown.selectedItem?.value?.name | declarationtypetrimmer" [(ngModel)]="search" (click)="search = null" pattern="[A-Za-z]{3}" />/>
-  <label igxLabel for="declarationType">{{labelPlaceHolder}}</label>
+    [value]="dropdown.selectedItem?.value?.name | declarationtypetrimmer" [(ngModel)]="search" (click)="search = null"
+    pattern="[A-Za-z]{3}" style="margin-left: -10px; padding-left: 8px;" />
+  <label igxLabel for=" declarationType">{{labelPlaceHolder}}</label>
 </igx-input-group>
 <igx-drop-down #dropdown>
   <div class="drop-down-virtual-wrapper">
-        <igx-drop-down-item
-            *igxFor="let item of items | igxFilter: fo; index as index; scrollOrientation: 'vertical'; containerSize: itemsMaxHeight; itemSize: itemHeight;"
-            [value]="item" role="option" [disabled]="item.disabled" [index]="index" >
-            {{ item.name }}
-        </igx-drop-down-item>
-    </div>
+    <igx-drop-down-item
+      *igxFor="let item of items | igxFilter: fo; index as index; scrollOrientation: 'vertical'; containerSize: itemsMaxHeight; itemSize: itemHeight;"
+      [value]="item" role="option" [disabled]="item.disabled" [index]="index">
+      {{ item.name }}
+    </igx-drop-down-item>
+  </div>
 </igx-drop-down>

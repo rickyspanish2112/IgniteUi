@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DisplayDensityToken, IgxFilterOptions } from 'igniteui-angular';
 import { DataItem } from '../../../model/DataItem';
 

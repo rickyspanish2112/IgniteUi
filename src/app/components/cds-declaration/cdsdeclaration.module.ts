@@ -15,12 +15,15 @@ import { IgniteModule } from 'src/app/shared/ignite/ignite.module';
 import { AutocompletePipeStartsWith, DeclarationTypeTrimmer } from './pipes/declaration-type.pipe';
 import { TransportdataComponent } from './header/transport-data/transportdata.component';
 import { ValuebuildupComponent } from './header/transport-data/valuebuildup.component';
-import { IgxOverlayService } from 'igniteui-angular';
+import { IgxOverlayService, IgxGridModule } from 'igniteui-angular';
 import { InputComponent } from 'src/app/shared/components/controls/input/input.component';
 import { TransportComponent } from './header/transport-data/transport.component';
 import { GridContainerComponent } from './header/grids/grid-container.component';
 import { Grid1Component } from './header/grids/grid-1/grid1.component';
 import { Grid2Component } from './header/grids/grid-2/grid2.component';
+import { DropdownComponent } from 'src/app/shared/components/controls/dropdown/dropdown.component';
+import { GridComponent } from 'src/app/shared/components/controls/grid/grid.component';
+import { GridWithTransactionsComponent } from 'src/app/shared/components/controls/grid/grid-transaction.component';
 
 
 
@@ -45,7 +48,10 @@ import { Grid2Component } from './header/grids/grid-2/grid2.component';
     TransportComponent,
     GridContainerComponent,
     Grid1Component,
-    Grid2Component
+    Grid2Component,
+    DropdownComponent,
+    GridComponent,
+    GridWithTransactionsComponent
   ],
   imports: [
     SharedModule,

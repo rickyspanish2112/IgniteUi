@@ -22,7 +22,9 @@ import {
   IgxDatePickerModule,
   IgxSnackbarModule,
   IgxCardModule,
-  IgxMaskModule
+  IgxMaskModule,
+  IgxGridModule,
+  IgxDialogModule
 } from 'igniteui-angular';
 
 @NgModule({
@@ -75,7 +77,9 @@ import {
     IgxDatePickerModule,
     IgxSnackbarModule,
     IgxCardModule,
-    IgxMaskModule
+    IgxMaskModule,
+    IgxGridModule,
+    IgxDialogModule
   ]
 })
 export class IgniteModule { }
