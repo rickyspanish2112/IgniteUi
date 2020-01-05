@@ -1,30 +1,28 @@
 
 <div class="grid__wrapper">
   <app-grid-with-transactions>
-      <igx-grid #gridRowEditTransaction [data]="data" [primaryKey]="'Id'" width="100%" height="200px"
-          [rowEditable]="true" [allowFiltering]="true">
+      <igx-grid #gridRowEditTransaction [data]="data" [primaryKey]="'Id'" width="90%" height="200px "
+          [rowEditable]="true" [allowFiltering]="false">
           <igx-column [pinned]="true" [filterable]="false" [editable]="false" width="100px">
               <ng-template igxCell let-cell="cell" let-val>
                   <button igxButton (click)="deleteRow(cell.cellID.rowID)" [disabled]="cell.row.deleted">Delete</button>
               </ng-template>
           </igx-column>
           <igx-column field="Id" header="#" [pinned]="true" [filterable]="false" width="50px"></igx-column>
-          <igx-column field="Code" header="Code" dataType="string" [sortable]="false">
+          <igx-column field="Code" header="Code" dataType="string" [sortable]="true">
               <ng-template igxCellEditor let-cell="cell">
-                  <input name="Code" [igxFocus]="true" [(ngModel)]="cell.editValue"
-                      style="color: black; width: 30px;"  [igxTextSelection]="true"  />
+                  <input name="Code" [igxFocus]="true" [(ngModel)]="cell.editValue" [igxTextSelection]="true"  />
               </ng-template>
           </igx-column>
-          <igx-column field="Currency" header="Currency" dataType="string" [sortable]="false">
+          <igx-column field="Currency" header="Currency" dataType="string" [sortable]="true">
             <ng-template igxCellEditor let-cell="cell">
-                <input name="Currency" [igxFocus]="true" [(ngModel)]="cell.editValue"
-                    style="color: black; width: 30px;" [igxTextSelection]="true"/>
+                <input name="Currency" [igxFocus]="true" [(ngModel)]="cell.editValue" [igxTextSelection]="true"  />
             </ng-template>
         </igx-column>
         <igx-column field="Amount" header="Amount" dataType="number" [sortable]="false">
           <ng-template igxCellEditor let-cell="cell">
               <input name="Number" [igxFocus]="true" [(ngModel)]="cell.editValue"
-                  style="color: black; width: 30px;" [igxTextSelection]="true" />
+              [igxTextSelection]="true" />
           </ng-template>
       </igx-column>
       </igx-grid>
