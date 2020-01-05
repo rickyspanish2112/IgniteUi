@@ -2,9 +2,28 @@
   <app-grid-with-transactions>
   <igx-grid #gridRowEditTransaction [data]="data" [primaryKey]="'Id'" width="100%" height="200px"
   [rowEditable]="true" [allowFiltering]="false">
-  <igx-column field="Code" header="Code" [pinned]="false" [filterable]="false" width="200px"></igx-column>
-  <igx-column field="Currency" header="Currency" [pinned]="false" [filterable]="false" width="200px"></igx-column>
-  <igx-column field="Amount" header="Amount" [pinned]="false" [filterable]="false" width="300px"></igx-column>
+  <igx-column field="Id" header="#" [pinned]="false" [filterable]="false" width="100px"></igx-column>
+  <igx-column field="Code" width="110px" dataType="string" [editable]="true">
+    <ng-template igxCellEditor let-cell="cell">
+     <igx-input-group>
+      <input igxInput name="Code" [(ngModel)]="cell.value" [igxFocus]='true' [igxTextSelection]="true" />
+     </igx-input-group>
+    </ng-template>
+   </igx-column>
+   <igx-column field="Currency" width="110px" dataType="string" [editable]="true">
+    <ng-template igxCellEditor let-cell="cell">
+     <igx-input-group>
+      <input igxInput name="Currency" [(ngModel)]="cell.value" [igxFocus]='true' [igxTextSelection]="true" />
+     </igx-input-group>
+    </ng-template>
+   </igx-column>
+   <igx-column field="Amount" width="110px" dataType="number" [editable]="true">
+    <ng-template igxCellEditor let-cell="cell">
+     <igx-input-group>
+      <input igxInput name="Amount" [(ngModel)]="cell.value" [igxFocus]='true' [igxTextSelection]="true" />
+     </igx-input-group>
+    </ng-template>
+   </igx-column>
 </igx-grid>
 
 </app-grid-with-transactions>
@@ -18,8 +37,8 @@
 </div>
 <igx-dialog title="Submit the following transactions?">
   <igx-grid #dialogGrid [data]="transactionsData" [rowHeight]="64"
-      [primaryKey]="'id'" width="600px" height="300px" [emptyGridMessage]="'No available transactions'">
-      <igx-column field="id" header="ID" [dataType]="'string'" width="100px"></igx-column>
+      [primaryKey]="'Id'" width="600px" height="300px" [emptyGridMessage]="'No available transactions'">
+      <igx-column field="Id" header="ID" [dataType]="'string'" width="100px"></igx-column>
       <igx-column field="type" header="Type" width="150px" [sortable]="true">
           <ng-template igxCell let-cell="cell" let-val>
               <span [class]="classFromType(val)">{{ typeFormatter(val) }}</span>

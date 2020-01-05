@@ -17,14 +17,14 @@ export class GridComponent implements OnInit {
 
   public data: any[];
   public transactionsData: Transaction[] = [];
-  private addProductId: number;
-  private code: string;
-  private currency: string;
+  private Id: number;
+  private code: '';
+  private currency: '';
   private amount: number;
 
   constructor() {
     this.data = DATA;
-    this.addProductId = this.data.length + 1;
+    this.Id = this.data.length + 1;
   }
 
   ngOnInit(): void {
@@ -36,7 +36,7 @@ export class GridComponent implements OnInit {
 
   public addRow() {
     this.grid.addRow({
-      Id: this.addProductId++,
+      Id: this.Id++,
       Code: this.code,
       Currency: this.currency,
       Amount: this.amount
