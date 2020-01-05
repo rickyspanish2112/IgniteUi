@@ -10,6 +10,15 @@ import { DisplayDensityToken, IgxDropDownComponent, IgxInputGroupComponent, Conn
 export class ValuebuildupComponent implements OnInit {
 apportionedBy = 'Apportioned By [64]';
 airportOfLoading = 'Airport of Loading [61]';
+airTransportCosts = 'Air Transport Costs [62]';
+totalFreightCharges = 'Total Freight Charges [63]';
+currency = 'Currency';
+transportCosts = 'Trpt. costs, loading and handling chgs.';
+allowableDiscountAmount = 'Allowable Discount Amount [65]';
+allowablePercentage = 'Allowable Discount Percentage [65]';
+insurance = 'Insurance [66]';
+otherChargesDeductions = 'Other Charges/Deductions [67]';
+adjustmentForVat = 'Adjustment For Vat Value [68]';
 
 @ViewChild(IgxDropDownComponent, { static: true }) public igxDropDown: IgxDropDownComponent;
 @ViewChild('inputGroup', { read: IgxInputGroupComponent, static: true }) public inputGroup: IgxInputGroupComponent;

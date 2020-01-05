@@ -7,14 +7,98 @@
 <div>
   <div class="tall" igxLayout igxLayoutItemAlign="flex-start">
     <div class="layout-box__el" igxFlex igxFlexGrow="0">
-      <app-input class="apportionedBy" [placeHolder]='airportOfLoading'></app-input>
+      <app-input class="airportOfLoading" [placeHolder]='airportOfLoading'></app-input>
     </div>
   </div>
-<div style="margin-left: 8px;">
-  <div class="layout-box" igxLayout igxLayoutDir="row" style="margin-left: 200px;">
-    <div class="layout-box__el" igxFlex igxFlexGrow="1">1</div>
-    <div class="layout-box__el" igxFlex igxFlexGrow="1">2</div>
-    <div class="layout-box__el" igxFlex igxFlexGrow="1">3</div>
-</div>
-</div>
+  <div style="margin-left: 8px;">
+    <div class="layout-box" igxLayout igxLayoutDir="row" style="margin-left: 200px;">
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 50px;">
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="2" style="width: 140px;">
+        <app-input class="airTransportCosts" [placeHolder]='airTransportCosts'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 10px;">
+        <app-input class="code"></app-input>
+      </div>
+    </div>
+    <div class="layout-box" igxLayout igxLayoutDir="row" style="margin-left: 200px;">
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 50px;">
+        <app-input class="currency" [placeHolder]='currency'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="2" style="width: 140px;">
+        <app-input class="totalFreightCharges" [placeHolder]='totalFreightCharges'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 10px;">
+        <app-input class="code"></app-input>
+      </div>
+    </div>
+    <div class="layout-box" igxLayout igxLayoutDir="row" style="margin-left: 200px;">
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 50px;">
+        <app-input class="currency" [placeHolder]='currency'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="2" style="width: 140px;">
+        <app-input class="transportCosts" [placeHolder]='transportCosts'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 10px;">
+        <app-input class="code"></app-input>
+      </div>
+    </div>
+    <div class="layout-box" igxLayout igxLayoutDir="row" style="margin-left: 200px;">
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 50px;">
+        <app-input class="currency" [placeHolder]='currency'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="2" style="width: 140px;">
+        <app-input class="allowableDiscountAmount" [placeHolder]='allowableDiscountAmount'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 10px;">
+        <app-input class="code"></app-input>
+      </div>
+    </div>
+    <div class="layout-box" igxLayout igxLayoutDir="row" style="margin-left: 200px;">
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 50px;">
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="2" style="width: 140px;">
+        <app-input class="allowablePercentage" [placeHolder]='allowablePercentage'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 10px;">
+        <app-input class="code"></app-input>
+      </div>
+    </div>
+    <div class="layout-box" igxLayout igxLayoutDir="row" style="margin-left: 200px;">
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 50px;">
+        <app-input class="currency" [placeHolder]='currency'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="2" style="width: 140px;">
+        <app-input class="insurance" [placeHolder]='insurance'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 10px;">
+        <app-input class="code"></app-input>
+      </div>
+    </div>
+    <div class="layout-box" igxLayout igxLayoutDir="row" style="margin-left: 200px;">
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 50px;">
+        <app-input class="currency" [placeHolder]='currency'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="2" style="width: 140px;">
+        <app-input class="otherChargesDeductions" [placeHolder]='otherChargesDeductions'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 10px;">
+        <app-input class="code"></app-input>
+      </div>
+    </div>
+    <div class="layout-box" igxLayout igxLayoutDir="row" style="margin-left: 200px;">
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 50px;">
+        <app-input class="currency" [placeHolder]='currency'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="2" style="width: 140px;">
+        <app-input class="adjustmentForVat" [placeHolder]='adjustmentForVat'></app-input>
+      </div>
+      <div class="layout-box__el" igxFlex igxFlexGrow="1" style="width: 10px;">
+        <app-input class="code"></app-input>
+      </div>
+    </div>
+    <div>
+      <app-grid></app-grid>
+      </div>
+  </div>
 </div>
