@@ -127,6 +127,15 @@ export class GridComponent implements OnInit {
       // args.event.preventDefault();
       // args.cancel = true;
 
+      const currentId = this.Id;
+      const slectedRow = target.rowIndex;
+
+      const matchedIndex = currentId - 2; // Very hackey but it's late!
+
+      if (matchedIndex !== slectedRow) {
+          return;
+        }
+
       this.doAddRow();
 
       /* if (target.column.dataType === 'number' && target.editValue < 10) {
