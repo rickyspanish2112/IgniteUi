@@ -23,7 +23,6 @@ import { Grid1Component } from './header/grids/grid-1/grid1.component';
 import { Grid2Component } from './header/grids/grid-2/grid2.component';
 import { DropdownComponent } from 'src/app/shared/components/controls/dropdown/dropdown.component';
 import { GridComponent } from 'src/app/shared/components/controls/grid/grid.component';
-import { GridWithTransactionsComponent } from 'src/app/shared/components/controls/grid/grid-transaction.component';
 
 
 
@@ -51,7 +50,6 @@ import { GridWithTransactionsComponent } from 'src/app/shared/components/control
     Grid2Component,
     DropdownComponent,
     GridComponent,
-    GridWithTransactionsComponent
   ],
   imports: [
     SharedModule,
