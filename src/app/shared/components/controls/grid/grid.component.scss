@@ -2,34 +2,33 @@
   margin-top: 8px;
   margin-left: -5PX;
   width: 100%;
-
+  border: gray 2px solid;
+  border-radius: 7px;
+  padding: 2px;
 }
 
-.buttons-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 5px;
+
+
+//Workaround for scrolling on a MAC
+::-webkit-scrollbar {
+  width:16px;
 }
-.buttons-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 10px 0;
+::-webkit-scrollbar-track {
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  background:rgba(0,0,0,0.1);
 }
 
-.transaction--update, .transaction--delete, .transaction--add {
-  font-weight: 600;
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  background:rgba(0,0,0,0.2);
 }
-.transaction--add {
-  color: #6b3;
+
+::-webkit-scrollbar-thumb:hover {
+  background:rgba(0,0,0,0.4);
 }
-.transaction--update {
-  color: #4a71b9;
-}
-.transaction--delete {
-  color: #ee4920;
-}
-.transaction-log {
-  word-wrap: none;
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background:rgba(0,0,0,0.05);
 }

@@ -1,100 +1,69 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxGridTransaction, IgxTransactionService, IgxDialogComponent, IgxGridComponent, Transaction } from 'igniteui-angular';
+import {
+  IgxGridTransaction,
+  IgxTransactionService,
+  IgxGridComponent,
+  IGridKeydownEventArgs,
+  IgxGridCellComponent
+} from 'igniteui-angular';
+import { AdditionsDeductions } from 'src/app/model/AdditionsDeductionData';
 import { DATA } from './data/dummyData';
 
 @Component({
-  providers: [{ provide: IgxGridTransaction, useClass: IgxTransactionService }],
   selector: 'app-grid',
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss']
 })
 export class GridComponent implements OnInit {
-  @ViewChild('gridRowEditTransaction', { read: IgxGridComponent, static: true }) public grid: IgxGridComponent;
-  @ViewChild(IgxDialogComponent, { static: true }) public dialog: IgxDialogComponent;
-  @ViewChild('dialogGrid', { read: IgxGridComponent, static: true }) public dialogGrid: IgxGridComponent;
 
-  public currentActiveGrid: { id: string, transactions: any[] } = { id: '', transactions: [] };
+  @ViewChild('grid', { read: IgxGridComponent, static: true })
+  public grid: IgxGridComponent;
 
-  public data: any[];
-  public transactionsData: Transaction[] = [];
-  private Id: number;
-  private code: '';
-  private currency: '';
-  private amount: number;
+  public additionsDeduction: AdditionsDeductions;
+  public data: AdditionsDeductions[];
+  public Id;
+  public Code;
+  public Currency;
+  public Amount;
 
   constructor() {
-    this.data = DATA;
-    this.Id = this.data.length + 1;
-  }
+    }
 
   ngOnInit(): void {
-    this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
-    this.grid.transactions.onStateUpdate.subscribe(() => {
-      this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
-    });
+
+    this.data = DATA;
+    this.Id = this.data.length;
+    this.additionsDeduction = new AdditionsDeductions();
+
   }
 
-  public addRow() {
-    this.grid.addRow({
-      Id: this.Id++,
-      Code: this.code,
-      Currency: this.currency,
-      Amount: this.amount
-    });
+  public removeRow(rowIndex) {
+    const row = this.grid.getRowByIndex(rowIndex);
+    row.delete();
   }
 
-  public deleteRow(rowID) {
-    this.grid.deleteRow(rowID);
-  }
+  public customKeydown(args: IGridKeydownEventArgs) {
+    const target: IgxGridCellComponent = args.target as IgxGridCellComponent;
+    const evt: KeyboardEvent = args.event as KeyboardEvent;
+    const type = args.targetType;
 
-  public undo() {
-    this.grid.transactions.undo();
-  }
+    if (type === 'dataCell' && evt.key.toLowerCase() === 'arrowdown') {
 
-  public redo() {
-    this.grid.transactions.redo();
-  }
+      const currentId = this.Id;
+      const selectedRow = target.rowIndex;
 
-  public openCommitDialog() {
-    this.dialog.open();
-    this.dialogGrid.reflow();
-  }
+      const alignedSelectedRow = selectedRow + 1; // Very hackey but it will do for POC
 
-  public commit() {
-    this.grid.transactions.commit(this.data);
-    this.dialog.close();
-  }
+      if (currentId !== alignedSelectedRow) {
+        return;
+      }
 
-  public cancel() {
-    this.dialog.close();
-  }
-
-  public discard() {
-    this.grid.transactions.clear();
-    this.dialog.close();
-}
-
-  public stateFormatter(value: string) {
-    return JSON.stringify(value);
-  }
-
-  public typeFormatter(value: string) {
-    return value.toUpperCase();
-  }
-
-  public classFromType(type: string): string {
-    return `transaction--${type.toLowerCase()}`;
-  }
-
-  public get undoEnabled(): boolean {
-    return this.grid.transactions.canUndo;
-  }
-
-  public get redoEnabled(): boolean {
-    return this.grid.transactions.canRedo;
-  }
-
-  public get hasTransactions(): boolean {
-    return this.grid.transactions.getAggregatedChanges(false).length > 0;
+      this.grid.addRow({
+        Id: this.Id++,
+        Code: '',
+        Currency: '',
+        Amount: ''
+      });
+    }
   }
 }
